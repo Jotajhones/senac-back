@@ -12,7 +12,13 @@ const sequelize = new Sequelize({
   port: configEnv.DB_PORT,
   username: configEnv.DB_USERNAME,
   password: configEnv.DB_PASSWORD,
-  database: configEnv.DB_NAME
+  database: configEnv.DB_NAME, 
+  dialectOptions: {
+    ssl: {
+      require: true,
+      rejectUnauthorized: false,
+    },
+  },
 });
 
 // A função SYNC só é recomendada para projetos na fase de testes, como por exemplo o uso do sqlit3
