@@ -16,7 +16,7 @@ const Produto = sequelize.define('Produto', {
     allowNull: false,
   },
   estoque: {
-    type: DataTypes.NUMBER,
+    type: DataTypes.INTEGER,
     allowNull:false,
   },
   tamanho: {
